@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kibetken Portfolio</title>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding:20px;
+
+    background-image:url("images/background.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    color:white;
+}
+
+header,
+section,
+footer{
+    background:rgba(0,0,0,0.7);
+
+    max-width:800px;
+    margin:20px auto;
+    padding:20px;
+
+    border-radius:10px;
+
+    animation:fadeIn 1s ease-in;
+}
+
+.profile{
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    display:block;
+    margin:auto;
+}
+
+.project-image{
+    width:100%;
+    border-radius:10px;
+}
+
+h1,h2{
+    text-align:center;
+}
+
+.btn{
+    background:#0366d6;
+    color:white;
+    text-decoration:none;
+
+    padding:10px 20px;
+    border-radius:5px;
+}
+
+form input,
+form textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:10px;
+}
+
+button{
+    padding:10px 20px;
+    cursor:pointer;
+}
+
+.dark{
+    background:#121212;
+    color:white;
+}
+
+.dark section,
+.dark header,
+.dark footer{
+    background:#222;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Social Media Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Dark Mode Button -->
+    <button class="dark-btn" onclick="toggleDarkMode()">
+        🌙 Dark Mode
+    </button>
+
+    <!-- Header -->
+    <header>
+        <img src="images/profile.jpg" alt="Profile Picture" class="profile">
+
+        <h1>Kibetken</h1>
+
+        <p>Student | Programmer | Technology Enthusiast</p>
+    </header>
+
+    <!-- About -->
+    <section>
+        <h2>About Me</h2>
+
+        <p>
+            I am learning programming, web development,
+            Git and GitHub. My goal is to become a software developer.
+        </p>
+    </section>
+
+    <!-- Skills -->
+    <section>
+        <h2>Skills</h2>
+
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Git & GitHub</li>
+            <li>Python</li>
+        </ul>
+    </section>
+
+    <!-- Projects -->
+    <section>
+        <h2>Projects</h2>
+
+        <h3>Personal Portfolio Website</h3>
+
+        <img src="images/project1.png"
+             alt="Project Screenshot"
+             class="project-image">
+
+        <p>My first personal portfolio website.</p>
+    </section>
+
+    <!-- Download CV -->
+    <section>
+        <h2>Curriculum Vitae</h2>
+
+        <a href="cv.pdf" download class="btn">
+            Download CV
+        </a>
+    </section>
+
+    <!-- Contact Form -->
+    <section>
+        <h2>Contact Me</h2>
+
+        <form>
+            <input type="text"
+                   placeholder="Your Name"
+                   required>
+
+            <input type="email"
+                   placeholder="Your Email"
+                   required>
+
+            <textarea
+                placeholder="Your Message"
+                rows="5"></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+        </form>
+    </section>
+
+    <!-- Social Media -->
+    <section>
+        <h2>Connect With Me</h2>
+
+        <a href="https://github.com/LGRTECH98">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+
+        <br><br>
+
+        <a href="https://linkedin.com">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Kibetken. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+}
+</html>
